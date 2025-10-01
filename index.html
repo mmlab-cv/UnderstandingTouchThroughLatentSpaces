@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="SplatTouch: Explicit 3D Representation Binding Vision and Touch.">
+  <meta name="keywords" content="Vision to Touch, 3D contact localization, Diffusion Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SplatTouch</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PMXG52KP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'GTM-PMXG52KP');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="http://mmlabsites.disi.unitn.it/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/mmlab-cv/">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SplatTouch: Explicit 3D Representation Binding Vision and Touch</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=XVlen3cAAAAJ&hl=it&oi=ao">Antonio Luigi Stefani</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=I6vOrqkAAAAJ&hl=it&oi=ao">Niccolò Bisagno</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=mR1GK28AAAAJ&hl=it&oi=ao">Nicola Conci</a><sup>1,2</sup>,
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=fdlZC0oAAAAJ&hl=it">Francesco De Natale</a><sup>1,2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Trento,</span>
+            <span class="author-block"><sup>2</sup>CNIT</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                  <a href="./static/assets/SplatTouch.pdf"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/mmlab-cv/SplatTouch/tree/main"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <div class="content has-text-justified">
+          <h2 class="title is-3">Teaser</h2>
+          <img src="./static/images/teaser.png"
+            alt="Overview."/>
+            <p>Starting from a set of images and sparse touch samples, we generate an implicit NeRF representation alongside a 3D Gaussian Splatting model as an explicit 3D scene representation. The explicit 3D model is then transformed into Normalized Object Coordinate Space (NOCS), enabling the extraction of NOCS maps, where each 3D position is color coded, as scene-level descriptors. This allow to effectively bind the images from the vision domain to the 3D localization of touch samples in the scene, allowing a step forward toward fully touchable 3D scenes.</p>
+      </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+        <p>
+          When compared to standard vision-based sensing, touch images generally captures information of a small area of an object, without context, making it difficult to collate them to build a fully <i>touchable</i> 3D scene. Researchers have leveraged generative models to create tactile maps (images) of unseen samples using depth and RGB images extracted from implicit 3D scene representations. Being the depth map referred to a single camera, it provides sufficient information for the generation of a local tactile maps, but it does not encode the global position of the touch sample in the scene.
+        </p>
+        <p>
+          In this work, we introduce a novel explicit representation for multi-modal 3D scene modeling that integrates both vision and touch. Our approach combines Gaussian Splatting (GS) for 3D scene representation with a diffusion-based generative model to infer missing tactile information from sparse samples, coupled with a contrastive approach for 3D touch localization. Unlike NeRF-based implicit methods, Gaussian Splatting enables the computation of an absolute 3D reference frame via Normalized Object Coordinate Space (NOCS) maps, facilitating structured, 3D-aware tactile generation. This framework not only improves tactile sample prompting but also enhances 3D tactile localization, overcoming the local constraints of prior implicit approaches.
+        </p>
+        <p>
+          We demonstrate the effectiveness of our method in generating novel touch samples and localizing tactile interactions in 3D. Our results show that explicitly incorporating tactile information into Gaussian Splatting improves multi-modal scene understanding, offering a significant step toward integrating touch into immersive virtual environments.
+        </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- NOCS scene Representation. -->
+      <div class="column">
+        <div class="content has-text-justified">
+          <h2 class="title is-3">NOCS scene Representation</h2>
+          <img src="./static/images/pipeline.pdf"
+            alt="NOCS scene Representation."/>
+            <p>Our scene-level NOCS map generation pipeline. We start with the Gaussian Splatting (GS) representation of the scene, which initially contains outliers (left). The scene is refined and normalized within the NOCS framework (center), where each 3D position in space is mapped to an RGB color sample for visualization. The Gaussian Splatting scene is recolored based on the NOCS representation, allowing for the extraction of NOCS maps using the same camera parameters as the vision samples (right).</p>
+        </div>
+      </div>
+      <!--/ NOCS scene Representation. -->
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- two columns -->
+    <div class="columns is-multiline is-centered">
+      <!-- Architecture. -->
+      <div class="column is-half has-text-centered">
+        <div class="content has-text-justified">
+          <h2 class="title is-3">Haptic Map Generation</h2>
+          <img src="./static/images/SplatTouchDiffusionModel.png"
+            alt="Diffusion Model."/>
+        </div>
+      </div>
+      <!--/ Architecture. -->
+      <!-- Architecture. -->
+      <div class="column is-half has-text-centered">
+        <div class="content has-text-justified">
+          <h2 class="title is-3">3D Contact Localization</h2>
+          <img src="./static/images/SplatTouchSimSiam.png"
+            alt="Localization."/>
+        </div>
+      </div>
+      <div class="column is-half has-text-centered">
+        <div class="content has-text-justified">
+          <p>Our diffusion model for cross-modal touch generation. The conditioning vector encapsulates the aligned RGB, depth and NOCS maps to obtain the best possible representation of the novel touch sample τ at position <i>[R|t]</i>.</p>
+        </div>
+      </div>
+      <div class="column is-half has-text-centered">
+        <div class="content has-text-justified">
+          <p>Our contrastive networks for 3D contact localization. NOCS and touch are jointly train to obtain representative feature. At test time, given a query touch, the 3D contact localization branch predicts the color that can be mapped to the 3D space thanks to the NOCS map representation.</p>
+        </div>
+      </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Results. -->
+      <div class="column is-four-fifths has-text-centered">
+        <h2 class="title is-3">Results on Haptic Map Generation</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/TarfNocsQualitative_old.png"
+            alt="Results."/>
+            <p>Qualitative results on the cross-modal touch generation task. Since the touched sample approximately corresponds to the center of the RGB image, we have highlighted the touched area with a square for better visualization. Our model demonstrates an improved ability to interpret the contextual information provided by the RGB images. For example, in the desk/keyboard sample, the surrounding context appears similar, leading TaRF to generate nearly identical touch samples. In contrast, our method effectively captures the subtle variations in texture and material, resulting in a more diverse and context-aware generation. A similar trend is observed in the edge/table/board images, where our method successfully captures part of the board’s pattern. Notably, the board is a Braille surface used as a calibration object with fine details in the dataset, further demonstrating our model’s improved ability to leverage fine-grained visual details to refine touch predictions.</p>
+        </div>
+      </div>
+      <!--/ Results. -->
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Results. -->
+      <div class="column is-four-fifths has-text-centered">
+        <h2 class="title is-3">Results on 3D Contact Localization</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/qualitative_localization.png"
+            alt="Results."/>
+            <p>Qualitative results on 3D touch estimation task. On the left, the query samples, the relative NOCS and estimated errors. On the right, their actual location in the scene as seen from different viewpoints. The colored cones ∆ represent the ground truth positions and the cubes □ the predicted ones. Our framework consistently estimates the 3D position of query touch samples. The blue and green samples in both scenes are predicted close to their real positions. However, the red sample highlights two areas for potential improvement, primarily due to the noisiness of the Gaussian reconstruction. In the first scene, the position is predicted on the same material surface but at a different location. This is likely caused by Gaussians at the center of the desk being reconstructed further away in the scene and subsequently removed during the noise filtering step—an issue stemming from the challenge of reconstructing featureless surfaces. In the second case, the Gaussian is projected far from the surface but is not filtered out in the noise removal step, resulting in the sample being predicted further away than expected. Addressing these challenges could further refine the accuracy of 3D touch localization.</p>
+        </div>
+      </div>
+      <!--/ Results. -->
+    </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@article{stefani2025splattouch,
+  title={SplatTouch: Explicit 3D Representation Binding Vision and Touch},
+  author={Stefani, Antonio Luigi and Bisagno, Niccol{\'o} and Conci, Nicola and De Natale, Francesco},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  month={June},
+  year={2025}
+}
+    </code></pre>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">See also our review to understand the context of this work!</h2>
+    <pre><code>
+@article{stefani2024signal,
+  title={Signal Processing for Haptic Surface Modeling: a Review},
+  author={Stefani, Antonio Luigi and Bisagno, Niccol{\`o} and Rosani, Andrea and Conci, Nicola and De Natale, Francesco},
+  journal={arXiv preprint arXiv:2409.20142},
+  year={2024}
+}
+    </code></pre>
+    <p>In this work, we present a comprehensive overview of the state-of-the-art in haptic surface modeling, with a particular focus on the signal processing techniques employed in the field. We categorize existing approaches, describe the most important datasets in detail, and provide a thorough overview of the key tasks involved in haptic surface processing.</p>
+    <p>Look <a href="https://mmlab-cv.github.io/HapticSurvey/">here</a> to get more information.</p>
+  </div>
+</section>
+
+<section class="section" id="fundings">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Funding</h2>
+    <p>We acknowledge the support of the MUR PNRR project iNEST-Interconnected Nord-Est Innovation Ecosystem (ECS00000043) funded by the European Union under NextGenerationEU. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or The European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.</p>
+  </div>
+</section>
+
+</body>
+</html>
