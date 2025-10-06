@@ -226,24 +226,42 @@
     </div>
 </section>
 
-<!-- carousel of sections -->
-<div class="carousel">
-  <div class="carousel-item has-text-centered">
-    <img src="./static/images/t-sne_rough.png"
-      alt="Roughness."/>
-    <p>Roughness</p>
+<!-- carousel of images with single text -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h2 class="title is-3">Latent space analysis</h2>
+        <div class="carousel carousel-animated carousel-animate-slide" data-autoplay="true">
+          <div class="carousel-container">
+            <div class="carousel-item is-active">
+              <img src="./static/images/t-sne_rough.png"
+                alt="Roughness."/>
+              <p>Roughness dimension in the latent space.</p>
+            </div>
+            <div class="carousel-item">
+              <img src="./static/images/t-sne_hard.png"
+                alt="Hardness."/>
+              <p>Hardness dimension in the latent space.</p>
+            </div>
+            <div class="carousel-item">
+              <img src="./static/images/t-sne_color.png"
+                alt="Colorfulness."/>
+              <p>Colorfulness dimension in the latent space.</p>
+            </div>
+          </div>
+          <div class="carousel-navigation is-centered">
+            <div class="carousel-nav-left">
+              <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div class="carousel-nav-right">
+              <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="carousel-item has-text-centered">
-    <img src="./static/images/t-sne_hard.png"
-      alt="Hardness."/>
-    <p>Hardness</p>
-  </div>
-  <div class="carousel-item has-text-centered">
-    <img src="./static/images/t-sne_color.png"
-      alt="Colorfulness."/>
-    <p>Colorfulness</p>
-  </div>
-</div>
 
 
 <section class="section" id="BibTeX">
