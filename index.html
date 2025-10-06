@@ -179,26 +179,28 @@
       <div class="column has-text-centered">
         <h2 class="title is-3">Our method: Supervised Contrastive Learning (SCL)</h2>
         <div class="columns is-centered">
-          <div class="column is-half has-text-centered">
-            <div class="content has-text-justified">
-              <img src="./static/images/ArchitetturaQomex.png"
-                alt="SCL Architecture."/>
+          <div class="columns is-multiline is-centered">
+            <div class="column is-half has-text-centered">
+              <div class="content has-text-justified">
+                <img src="./static/images/ArchitetturaQomex.png"
+                  alt="SCL Architecture."/>
+              </div>
             </div>
-          </div>
-          <div class="column is-half has-text-centered">
-            <div class="content has-text-justified">
-              <img src="./static/images/SCLLoss.png"
-                alt="SCL Loss."/>
+            <div class="column is-half has-text-centered">
+              <div class="content has-text-justified">
+                <img src="./static/images/SCLLoss.png"
+                  alt="SCL Loss."/>
+              </div>
             </div>
-          </div>
-          <div class="column is-half has-text-centered">
-            <div class="content has-text-justified">
-              <p>We employ a Supervised Contrastive Learning (SCL) framework to learn a latent space that captures human perceptual attributes from paired RGB images and haptic maps. The architecture consists of two parallel encoders: one for processing RGB images and another for haptic maps. Each encoder extracts modality-specific features, which are then projected into a shared latent space. The SCL loss function encourages the model to cluster embeddings of the same material class while pushing apart those of different classes. This approach allows us to investigate how visual and tactile modalities contribute to shaping a latent representation that aligns with human material perception.</p>
+            <div class="column is-half has-text-centered">
+              <div class="content has-text-justified">
+                <p>We employ a Supervised Contrastive Learning (SCL) framework to learn a latent space that captures human perceptual attributes from paired RGB images and haptic maps. The architecture consists of two parallel encoders: one for processing RGB images and another for haptic maps. Each encoder extracts modality-specific features, which are then projected into a shared latent space. The SCL loss function encourages the model to cluster embeddings of the same material class while pushing apart those of different classes. This approach allows us to investigate how visual and tactile modalities contribute to shaping a latent representation that aligns with human material perception.</p>
+              </div>
             </div>
-          </div>
-          <div class="column is-half has-text-centered">
-            <div class="content has-text-justified">
-              <p>The Supervised Contrastive Learning (SCL) loss function is designed to enhance the discriminative power of the learned embeddings in the latent space. For each anchor sample, the loss encourages the model to pull together embeddings of samples from the same material class (positives) while pushing apart embeddings from different classes (negatives). This is achieved by computing the cosine similarity between the anchor and all other samples in the batch, applying a temperature scaling factor to control the concentration of the distribution. The SCL loss effectively leverages label information to structure the latent space in a way that reflects human perceptual attributes such as roughness, hardness, and colorfulness.</p>
+            <div class="column is-half has-text-centered">
+              <div class="content has-text-justified">
+                <p>The Supervised Contrastive Learning (SCL) loss function is designed to enhance the discriminative power of the learned embeddings in the latent space. For each anchor sample, the loss encourages the model to pull together embeddings of samples from the same material class (positives) while pushing apart embeddings from different classes (negatives). This is achieved by computing the cosine similarity between the anchor and all other samples in the batch, applying a temperature scaling factor to control the concentration of the distribution. The SCL loss effectively leverages label information to structure the latent space in a way that reflects human perceptual attributes such as roughness, hardness, and colorfulness.</p>
+              </div>
             </div>
           </div>
         </div>
