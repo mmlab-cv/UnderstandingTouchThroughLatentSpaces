@@ -243,21 +243,21 @@
             <figure class="image is-4by3">
               <img src="./static/images/t-sne_hard.png" alt="Hardness">
             </figure>
-            <p class="mt-3">Hardness</p>
+            <p class="mt-3">Figures 5a and 5b present the hard/soft classification from [9]. The separation between hard and soft materials aligns almost perfectly, despite the fact that our models were trained using sound-derived labels from [17]. The main exception is leather, which is labeled as soft in Touch and Go and is located in the soft region of the latent space, but is perceived as hard in the perceptual study. This could be attributed to the specific type of leather used—for instance, flexible leather garments versus rigid leather upholstery. As to the perceptual analysis performed in [2], the subjective perception (Fig. 5d and 5c) is perfectly aligned to the latent space representation apart from the paper class, which is perceived as hard according to the perceptual study. Interestingly, although paper is labeled as soft in Touch and Go, it lies on the hard side of the boundary in the latent space, consistent with how it is perceived in the perceptual study.</p>
           </div>
 
           <div class="column is-one-third image-column">
             <figure class="image is-4by3">
               <img src="./static/images/t-sne_rough.png" alt="Roughness">
             </figure>
-            <p class="mt-3">Roughness</p>
+            <p class="mt-3">Figures 6a and 6b show the latent space projections colored based on the roughness classification from [9]. These results reveal that the visual encoder does not form clearly separable clusters for rough and smooth materials. The tactile latent space, while better organized, still shows discrepancies with the perceptual labels. Specifically, plastic and paper are associated with the rough label while they are perceptually perceived as smooth according to [9]. Additionally, the rock class which is classified as smooth according to the Touch and Go dataset, is instead perceptually perceived as rough. However, this might strongly depend on the specific samples as natural rocks can be both rough and smooth, while the processed counterparts are usually smoother. In addition, it is interesting to note that the paper class was on average scored 3 out of 6 in the roughness-smooth dimension in [9], thus it can be considered a challenging material to classify on the rough/smooth dimension based on human perception. This is further confirmed by the study performed in [2], where the paper material is associated to the rough class from a perceptual perspective (see Fig. 6c and 6d). As to the other materials, similar conclusions can be drawn.</p>
           </div>
 
           <div class="column is-one-third image-column">
             <figure class="image is-4by3">
               <img src="./static/images/t-sne_color.png" alt="Colorfulness">
             </figure>
-            <p class="mt-3">Colorfulness</p>
+            <p class="mt-3">An additional dimension considered in [9] is colorfulness. The mapping between the perceptual classification and the latent space is provided in Fig. 7. It is interesting to note that while for the touch latent space there is not a clear separation, a boundary can be identified for the vision latent space. This result can be intuitively explained as color is a feature which can be encoded by the visual system while it is unperceivable through touch.</p>
           </div>
         </div>
 
